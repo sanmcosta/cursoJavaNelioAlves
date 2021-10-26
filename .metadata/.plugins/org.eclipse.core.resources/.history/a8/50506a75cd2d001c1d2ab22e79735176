@@ -1,0 +1,22 @@
+package curso_programacao;
+
+import java.util.Scanner;
+
+import entities.CurrencyConverter;
+
+public class CurrencyConverterTest {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		CurrencyConverter cc = new CurrencyConverter();
+
+		char stop = 'n';
+
+		do {
+
+		} while (stop != 'n');
+		sc.close();
+	}
+
+}

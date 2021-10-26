@@ -1,0 +1,12 @@
+package entities;
+
+public class CurrencyConverter {
+
+	private double precoDolar;
+	private double taxaIOF = 1.06;
+	private double qteDolarComprado;
+
+	private double calculaValorPagoEmReais() {
+		return (precoDolar * qteDolarComprado) * 1
+	}
+}

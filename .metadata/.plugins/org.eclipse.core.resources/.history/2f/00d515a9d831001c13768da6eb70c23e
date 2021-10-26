@@ -1,0 +1,26 @@
+package entities;
+
+public class Student {
+
+	public String nome;
+
+	public double[] notasTrimeste = new double[3];
+	double somaNota;
+
+	public double notaFinal() {
+		somaNota = 0;
+		for (int i = 0; i < notasTrimeste.length; i++) {
+			somaNota += notasTrimeste[i];
+		}
+		return somaNota;
+	}
+
+	public String toString() {
+		if (somaNota >= 60) {
+			return "FINAL GRADE = " + String.format("%.2f %nPASS", somaNota);
+		} else {
+			return "FINAL GRADE = " + String.format("%.2f %nFAILED%nMISSING ", somaNota)
+					+ String.format("%.2f POINTS", 60 - somaNota);
+		}
+	}
+}

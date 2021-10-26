@@ -1,0 +1,48 @@
+package curso_programacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Account;
+
+public class Bank {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		Account account = new Account();
+		String depositar;
+
+		System.out.println("Enter account number: ");
+		account.setNumber(sc.nextInt());
+
+		System.out.println("Enter account holder: ");
+		account.setHolder(sc.next());
+
+		System.out.println("Is there na initial deposit (y/n)?");
+		depositar = sc.nextLine();
+		if (depositar == "y") {
+			System.out.println("Enter initial deposit value: ");
+			sc.next();
+			account.addBalance(sc.nextDouble());
+		}
+
+		System.out.println("Account data: ");
+		System.out.println(account);
+
+		System.out.println("Enter a deposit value: ");
+		account.addBalance(sc.nextDouble());
+
+		System.out.println("Updated account data: ");
+		System.out.println(account);
+
+		System.out.println("Enter a withdraw value: ");
+		account.removeBalance(sc.nextDouble());
+
+		System.out.println("Updated account data: ");
+		System.out.println(account);
+		sc.close();
+	}
+
+}

@@ -1,0 +1,28 @@
+package curso_programacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.CurrencyConverter;
+
+public class CurrencyConverterTest {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		CurrencyConverter cc = new CurrencyConverter();
+		Locale.setDefault(Locale.US);
+
+		char stop = 'n';
+
+		do {
+			System.out.println("What is the dollar price?");
+			cc.precoDolar = sc.nextDouble();
+			System.out.println("How many dollars will be bought?");
+			cc.qteDolarComprado = sc.nextDouble();
+			System.out.printf("Amount to be paid in reais = %.2f", cc.);
+		} while (stop != 'n');
+		sc.close();
+	}
+
+}

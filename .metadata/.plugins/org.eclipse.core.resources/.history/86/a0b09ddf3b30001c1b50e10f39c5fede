@@ -1,0 +1,18 @@
+package curso_programacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class ArrayMediaAltura {
+
+	public static void main(String[] args) {
+		int count;
+		double[] alturas;
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner();
+
+		sc.close();
+	}
+
+}
