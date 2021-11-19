@@ -1,7 +1,0 @@
-package entities;
-
-public class CurrencyConverter {
-
-	private double precoDolar;
-	private double taxaIOF;
-}

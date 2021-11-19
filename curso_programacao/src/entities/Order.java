@@ -2,32 +2,51 @@ package entities;
 
 import java.util.Date;
 
+import entities.enums.OrderStatus;
+
 public class Order {
 
-	private Date date;
-	private Product product;
+	private Integer id;
+	private Date moment;
+	private OrderStatus status;
 
-	public Order(Date date, Product product) {
-		super();
-		this.date = date;
-		this.product = product;
-		this.product.name = "TV";
+	public Order() {
+
 	}
 
-	public Date getDate() {
-		return date;
+	public Order(Integer id, Date moment, OrderStatus status) {
+		this.id = id;
+		this.moment = moment;
+		this.status = status;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public Integer getId() {
+		return id;
 	}
 
-	public Product getProduct() {
-		return product;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-	public void setProduct(Product product) {
-		this.product = product;
+	public Date getMoment() {
+		return moment;
+	}
+
+	public void setMoment(Date moment) {
+		this.moment = moment;
+	}
+
+	public OrderStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(OrderStatus status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "Order [id=" + id + ", moment=" + moment + ", status=" + status + "]";
 	}
 
 }
