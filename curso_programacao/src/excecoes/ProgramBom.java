@@ -45,7 +45,7 @@ public class ProgramBom {
 		} catch (DomainExceptions e) {
 			System.out.println(e.getMessage());
 		} catch (InputMismatchException e) {
-			System.out.println("Enter a valid integer");
+			System.out.println("Enter a valid integer value");
 		}
 		sc.close();
 	}
